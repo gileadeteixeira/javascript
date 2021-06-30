@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+            background-color: #eee;
+        }
+        div#box{
+            border-bottom-style: dashed;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    <div id="box">
+        <p>Informe seu nome <input type="text" name="txtnome" id="txtnome"></p>
+        <p>Informe o país onde você mora <input type="text" name="txtpais" id="txtpais"></p>
+        <input type="button" value="Consultar" onclick="consultar()" id="btnconsulta">
+    </div>
+    <div id="msg"></div>
+    <script>
+        var nome = document.querySelector('input#txtnome');
+        var pais = document.querySelector('input#txtpais');
+        var mensagem = document.querySelector('div#msg');
+        consultar = () =>{
+            mensagem.innerHTML = `
+                <p>Olá ${nome.value.toUpperCase()}!</p>
+                <p>Você mora em ${pais.value.toUpperCase()}.</p>
+            `;
+            if (pais.value.toUpperCase() != 'BRASIL') {
+                mensagem.innerHTML += `<p>Você é <strong>estrangeiro(a)</strong>!</p>`;
+            } else {
+                mensagem.innerHTML += `<p>Você é <strong>brasileiro(a)</strong>!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

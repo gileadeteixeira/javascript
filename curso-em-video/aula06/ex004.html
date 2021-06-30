@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Strings</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt("Qual o sem nome?");
+        var salario = Number(window.prompt("Qual o seu salário?"));
+        document.write(`Bem vindo(a), <strong>${nome}</strong>! Seu nome tem ${nome.length} letras.<br/>`)
+        document.write(`Texto informado: ${nome}<br/>`)
+        document.write(`Primeira letra: ${nome.charAt(0).toUpperCase()}<br/>`)
+        document.write(`Seu nome em maiúsculas é ${nome.toUpperCase()}<br/>`)
+        document.write(`Seu salário é ${
+            salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        }`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: #447dc7;
+            color: #ffffff;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1" name = 'h1' class="h1">Iniciando estudos com DOM</h1>
+    <p id="p1" name = 'paragrafo' class="par">Aqui vai um parágrafo</p>
+    <p id="p2" name = 'paragrafo' class="par">Aprendendo a usar <strong>DOM</strong> em JavaScript.</p>
+    <div id="div" name = 'div'>
+        Clique em mim
+    </div>
+    <script>
+        var corpo  = window.document.body;
+        //corpo.style.background = 'black';
+
+        /*
+        var indices = [0,1,2,3,4,5,6,7,8,9,10]
+        var arrayTagName = indices.map(number => {
+            var element
+            if (window.document.getElementsByTagName('p')[number]) {
+                element =  window.document.getElementsByTagName('p')[number]
+                return element
+            }
+        });
+        window.document.write(`<br/>getElementsByTagName:<br/>`);
+        arrayTagName.forEach((element, index, array) => {
+            window.document.write(`${index} -> Texto: ${element.innerText}<br/>Texto formatado: ${element.innerHTML}<br/>`);
+            if (!array[index+1]) {
+                window.document.write(`----------<br/>`)
+            }
+            
+        });
+        */
+        var tagName1 = window.document.getElementsByTagName('p')[0];
+        var tagName2 = window.document.getElementsByTagName('p')[1];
+        var arrayTagName = [tagName1, tagName2];
+        window.document.write(`<br/>getElementsByTagName('p')<br/>`);
+        arrayTagName.forEach((element, index, array) => {
+            window.document.write(`${index} -> Texto: ${element.innerText}<br/>Texto formatado: ${element.innerHTML}<br/>`);
+            if (!array[index+1]) {
+                window.document.write(`----------<br/>`)
+            }
+            
+        });
+        //tagName.style.color = 'blue';
+
+        var id = window.document.getElementById('h1');
+        window.document.write(`getElementById('h1')<br/>`);
+        window.document.write(`Texto: ${id.innerText}<br/>Texto formatado: ${id.innerHTML}<br/><br/>`);
+        /*d.style.background = 'green';
+        d.innerText = "Estou aguardando..."*/
+        
+        var name1 = window.document.getElementsByName('paragrafo')[0];
+        var name2 = window.document.getElementsByName('paragrafo')[1];
+        var arrayName = [name1, name2];
+        //name.style.color = 'black';
+        window.document.write(`getElementsByName('paragrafo')<br/>`);
+        arrayName.forEach((element, index, array) => {
+            window.document.write(`${index} -> Texto: ${element.innerText}<br/>Texto formatado: ${element.innerHTML}<br/>`);
+            if (!array[index+1]) {
+                window.document.write(`----------<br/>`)
+            }
+            
+        });
+        
+        var className1 = window.document.getElementsByClassName('par')[0];
+        var className2 = window.document.getElementsByClassName('par')[1];
+        var arrayClassName = [className1, className2];
+        window.document.write(`getElementsByClassName('par')<br/>`);
+        arrayClassName.forEach((element, index, array) => {
+            window.document.write(`${index} -> Texto: ${element.innerText}<br/>Texto formatado: ${element.innerHTML}<br/>`);
+            if (!array[index+1]) {
+                window.document.write(`----------<br/>`)
+            }
+            
+        });
+
+        var query = window.document.querySelector('div#div');
+        window.document.write(`<br/>querySelector('div#div'): ${query.innerText}`)
+
+    </script>
+</body>
+</html>

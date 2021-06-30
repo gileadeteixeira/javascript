@@ -1,0 +1,61 @@
+body{
+    background: rgb(70, 142, 236);
+    font: normal 15pt Arial;
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+div#resultado{
+    text-align: center;
+}
+div#resultado img{
+    padding: 15px;
+}
+
+p#btnVer{
+    text-align: end;
+}
+
+input[type = 'number']{
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #000000 1px;
+    padding: 5px;
+    outline: none;
+    text-align: center;
+    font: normal 12pt Arial;
+}
+
+input[type = 'button']{
+    width: 150px;
+    background: none;
+    border: solid #000000 2px;
+    border-radius: 15px;
+    text-align: center;
+    font: normal 12pt Arial;
+}
+
+input[type = 'button']:hover{
+    border-color: #468eec;
+    color: #468eec;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
