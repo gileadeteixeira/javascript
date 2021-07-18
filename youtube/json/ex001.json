@@ -1,0 +1,31 @@
+{
+    "chave_1": "string_1",
+    "chave_2": 12345,
+    "chave_3": false,
+    "chave_4": [
+        "string_2",
+        6789,
+        true
+    ],
+    "chave_5": {
+        "obj_chave_1": "string_3",
+        "obj_chave_2": 2468,
+        "obj_chave_3": false,
+        "obj_chave_4": [
+            "string_4",
+            13579,
+            true
+        ],
+        "obj_chave_5": {
+            "obj_2_chave_1": "string_5",
+            "obj_2_chave_2": 125690,
+            "obj_2_chave_3": false
+        },
+        "obj_chave_6": "string_6"
+    },
+    "chave_6": "string_7",
+    "chave_8": "\/ - Barra",
+    "chave_9": "\\ - Barra_invertida",
+    "chave_10": "\"Aspas\"",
+    "chave_11": "\u1514 - Unicode"
+}
